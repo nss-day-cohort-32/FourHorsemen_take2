@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+h1, h2  {
+    padding: 1em;
+}
+
+#class ul{
+    
+}
+li{
+    list-style-type: none;
+    margin-left: 1em;
+}
+input{
+    width: 50%;
+    padding: .6em;
+    margin-right: .4em;
+}
+button{
+    padding: .8em;
+    border-radius: 4px;
+
+}
+
+#results  {
+    border: 1px solid black;
+}
