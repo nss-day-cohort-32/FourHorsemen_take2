@@ -2,4 +2,3 @@ src/lib/node_modules
 
 .DS_Store
 
-src/scripts/api_keys.js
