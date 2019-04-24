@@ -1,4 +1,5 @@
-
+//This needs to be in another file for security..
+const token = "WKCHBZHI5XOXOL4XX7MR";
 
 //EVENTS BUTTON FUNCTIONALITY
 const meetupsField = document.querySelector(".meetupsInput")
