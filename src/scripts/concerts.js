@@ -5,22 +5,10 @@ function getConcertInfo(info) {
     }
         .then(concerts => concerts.json())
         .then(allConcerts => {
-            let concertInput = allConcerts._embedded.events.filter(concert => {
-
-                let concertsField = document.querySelector(".concertInput");
-                let concertsButton = document.querySelector(".concertsButton");
-
-                concertsButton.addEventListener("click", function () {
-                    getConcertInfo();
-                    const concertSelect = concertsField.value
-
-
-
-                    console.log(concertSelect);
-                })
+            let concertInput = allConcerts._embedded.events.forEach(concert => {
 
                 if (concert[info] === "true") {
-                     INPUT_OBJ = {
+                    INPUT_OBJ = {
                         type: "",
                         name: "",
                         location: "",
@@ -41,4 +29,14 @@ function getConcertInfo(info) {
             })
             console.log(INPUT_OBJ)
         });
-    }
+        let concertsField = document.querySelector(".concertInput");
+        let concertsButton = document.querySelector(".concertsButton");
+
+        concertsButton.addEventListener("click", function () {
+            const concertSelect = concertsField.value
+
+            getConcertInfo(concertInput)
+
+            console.log(concertSelect);
+        })
+}
