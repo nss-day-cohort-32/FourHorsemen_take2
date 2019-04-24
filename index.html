@@ -14,10 +14,15 @@
     <h2>Search for stuff to do today</h2>
     <div id="search">
       <ul id="searchList">
-        <li>
-          <input type="text" placeholder="parks by feature" /><button>
-            Search
-          </button>
+                <li><select type="text" id="parksInput" placeholder="parks by feature">
+                        <option value="baseball_fields">Baseball</option>
+                        <option value="basketball_courts">Basketball</option>
+                        <option value="soccer_fields">Soccer</option>
+                        <option value="golf_course">Golf</option>
+                        <option value="picnic_shelters">Picnic</option>
+                        <option value="fishing_by_permit">Fishing</option>
+                        <option value="hiking_trails">Hiking</option>
+                    </select><button id="parksButton">Search</button>
         </li>
         <br />
 
@@ -79,7 +84,7 @@
     <script src="src/scripts/api_keys.js"></script>
     <script src="src/scripts/concerts.js"></script>
     <script src="src/scripts/domBuilder.js"></script>
-    <script src="src/scripts/eventListener.js"></script>
+    <script src="src/scripts/parksApi.js"></script>
     <script src="src/scripts/main.js"></script>
     <script src="src/scripts/meetups.js"></script>
     <script src="src/scripts/parks.js"></script>
