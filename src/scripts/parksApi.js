@@ -25,9 +25,9 @@
                         INPUT_OBJ.type = "Parks"
                         INPUT_OBJ.name = park.park_name
                         INPUT_OBJ.location = park.mapped_location_address
-                        INPUT_OBJ.details = ""
+                        INPUT_OBJ.details = `Year Established: ${park.year_established}`
 
-                        console.log(INPUT_OBJ)
+                        domBuilder(INPUT_OBJ);
                     return true;
                     } else {
                         return false;

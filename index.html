@@ -1,71 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>4 Horsemen</title>
-    <link rel="stylesheet" href="src/styles/style.css">
-</head>
+    <link rel="stylesheet" href="src/styles/style.css" />
+  </head>
 
-<body>
+  <body>
     <h1>Welcome to Nashville!</h1>
 
     <h2>Search for stuff to do today</h2>
     <div id="search">
-        <ul id="searchList">
-            <li><select type="text" id="parksInput" placeholder="parks by feature">
-                    <option value="baseball_fields">Baseball</option>
-                    <option value="basketball_courts">Basketball</option>
-                    <option value="soccer_fields">Soccer</option>
-                    <option value="golf_course">Golf</option>
-                    <option value="picnic_shelters">Picnic</option>
-                    <option value="fishing_by_permit">Fishing</option>
-                    <option value="hiking_trails">Hiking</option>
-                </select><button id="parksButton">Search</button></li>
-            <li><input type="text" placeholder="parks by feature"><button>Search</button></li>
-            <br>
-            <li><input type="text" placeholder="restaurants by food type"><button>Search</button></li>
-            <br>
-            <li><select class="meetupsInput">
-                    <option value="" selected disabled hidden>Choose here</option>
-                    <option value="103">Music</option>
-                    <option value="101">Business</option>
-                    <option value="113">Food & Drink</option>
-                    <option value="105">Community</option>
-                    <option value="105">Arts</option>
-                    <option value="104">Film & Media</option>
-                    <option value="108">Sports & Fitness</option>
-                    <option value="107">Health</option>
-                    <option value="102">Science & Tech</option>
-                    <option value="109">Travel & Outdoor</option>
-                    <option value="111">Charity & Causes</option>
-                    <option value="114">Spirituality</option>
-                    <option value="115">Family & Education</option>
-                    <option value="112">Government</option>
-                    <option value="116">Holiday</option>
-                    <option value="106">Fashion</option>
-                    <option value="117">Home & Lifestyle</option>
-                    <option value="118">Auto, Boat & Air</option>
-                    <option value="119">Hobbies</option>
-                    <option value="199">Other</option>
-                    <option value="120">School Activities</option>
-                </select><button class="meetupsButton">Search</button></li>
-            <br>
-            <li><input type="text" placeholder="concerts by genre"><button>Search</button></li>
-            <br>
-        </ul>
+      <ul id="searchList">
+                <li><select type="text" id="parksInput" placeholder="parks by feature">
+                        <option value="baseball_fields">Baseball</option>
+                        <option value="basketball_courts">Basketball</option>
+                        <option value="soccer_fields">Soccer</option>
+                        <option value="golf_course">Golf</option>
+                        <option value="picnic_shelters">Picnic</option>
+                        <option value="fishing_by_permit">Fishing</option>
+                        <option value="hiking_trails">Hiking</option>
+                    </select><button id="parksButton">Search</button>
+        </li>
+        <br />
+
+        <li>
+          <select id="restaurantsinput" placeholder="restaurants by food type">
+          </select>
+          <button id="foodbutton">Search</button>
+        </li>
+
+        <br />
+        <li>
+          <select class="meetupsInput">
+            <option value="" selected disabled hidden>Choose here</option>
+            <option value="103">Music</option>
+            <option value="101">Business</option>
+            <option value="113">Food & Drink</option>
+            <option value="105">Community</option>
+            <option value="105">Arts</option>
+            <option value="104">Film & Media</option>
+            <option value="108">Sports & Fitness</option>
+            <option value="107">Health</option>
+            <option value="102">Science & Tech</option>
+            <option value="109">Travel & Outdoor</option>
+            <option value="111">Charity & Causes</option>
+            <option value="114">Spirituality</option>
+            <option value="115">Family & Education</option>
+            <option value="112">Government</option>
+            <option value="116">Holiday</option>
+            <option value="106">Fashion</option>
+            <option value="117">Home & Lifestyle</option>
+            <option value="118">Auto, Boat & Air</option>
+            <option value="119">Hobbies</option>
+            <option value="199">Other</option>
+            <option value="120">School Activities</option> </select
+          ><button class="meetupsButton">Search</button>
+        </li>
+        <br />
+        <li>
+          <input type="text" placeholder="concerts by genre" /><button>
+            Search
+          </button>
+        </li>
+        <br />
+      </ul>
     </div>
 
-    <br>
-    <br>
+    <br />
+    <br />
 
     <h2>Results</h2>
     <div id="results"></div>
 
-    <br>
-    <br>
+    <br />
+    <br />
 
     <h2>My Itinerary</h2>
     <div id="itinerary"></div>
@@ -73,11 +84,10 @@
     <script src="src/scripts/api_keys.js"></script>
     <script src="src/scripts/concerts.js"></script>
     <script src="src/scripts/domBuilder.js"></script>
-    <script src="src/scripts/eventListener.js"></script>
+    <script src="src/scripts/parksApi.js"></script>
     <script src="src/scripts/main.js"></script>
     <script src="src/scripts/meetups.js"></script>
     <script src="src/scripts/parks.js"></script>
     <script src="src/scripts/restaurants.js"></script>
-</body>
-
+  </body>
 </html>
