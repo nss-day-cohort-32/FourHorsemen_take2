@@ -13,60 +13,76 @@
 
     <h2>Search for stuff to do today</h2>
     <div id="search">
-      <ul id="searchList">
-                <li><select type="text" id="parksInput" placeholder="parks by feature">
-                        <option value="baseball_fields">Baseball</option>
-                        <option value="basketball_courts">Basketball</option>
-                        <option value="soccer_fields">Soccer</option>
-                        <option value="golf_course">Golf</option>
-                        <option value="picnic_shelters">Picnic</option>
-                        <option value="fishing_by_permit">Fishing</option>
-                        <option value="hiking_trails">Hiking</option>
-                    </select><button id="parksButton">Search</button>
-        </li>
-        <br />
+        <ul id="searchList">
+            <li><select type="text" id="parksInput" placeholder="parks by feature">
+                <option value="baseball_fields">Baseball</option>
+                <option value="basketball_courts">Basketball</option>
+                <option value="soccer_fields">Soccer</option>
+                <option value="golf_course">Golf</option>
+                <option value="picnic_shelters">Picnic</option>
+                <option value="fishing_by_permit">Fishing</option>
+                <option value="hiking_trails">Hiking</option>
+            </select><button id="parksButton">Search</button>
+</li>
+            <br>
+            <li>
+                <select id="restaurantsinput" placeholder="restaurants by food type">
+                </select>
+                <button id="foodbutton">Search</button>
+            </li>
+            <br>
+            <li><select class="meetupsInput">
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option value="103">Music</option>
+                    <option value="101">Business</option>
+                    <option value="113">Food & Drink</option>
+                    <option value="105">Community</option>
+                    <option value="105">Arts</option>
+                    <option value="104">Film & Media</option>
+                    <option value="108">Sports & Fitness</option>
+                    <option value="107">Health</option>
+                    <option value="102">Science & Tech</option>
+                    <option value="109">Travel & Outdoor</option>
+                    <option value="111">Charity & Causes</option>
+                    <option value="114">Spirituality</option>
+                    <option value="115">Family & Education</option>
+                    <option value="112">Government</option>
+                    <option value="116">Holiday</option>
+                    <option value="106">Fashion</option>
+                    <option value="117">Home & Lifestyle</option>
+                    <option value="118">Auto, Boat & Air</option>
+                    <option value="119">Hobbies</option>
+                    <option value="199">Other</option>
+                    <option value="120">School Activities</option>
+                </select><button class="meetupsButton">Search</button></li>
+            <br>
+            <select class="concertInput">
+                <option value="" selected disabled hidden>Concert Options</option>
+                <option value="G5viZ44M49amS">Ariana Grande</option>
+                <option value="G5viZ4Nxx598I">Tame Impala</option>
+                <option value="G5viZ4pLIX_0Y">Back Street Boys</option>
+                <option value="G5viZ4CEqF629">CMA Awards</option>
+                <option value="G5viZ4_2paEy5">Jimmy Buffett</option>
+                <option value="G5viZ49DbubVe">Queen and Adam Lambert</option>
+                <option value="G5viZ4EJqFKel">Celine Dion</option>
+                <option value="G5viZ4xLPrQWW">Dave Matthews Band</option>
+                <option value="G5viZ43Ma9DeG">Eric Church</option>
+                <option value="Z7r9jZ1AefYZd">JoJo from Nickelodeon</option>
+                <option value="G5viZ4kBgpaQy">Elton John</option>
+                <option value="G5viZ413aLNTZ">Shawn Mandez</option>
+                <option value="G5viZ4pNAq6RE">Santana</option>
+                <option value="G5viZ4NLq5yOg">John Mayer</option>
+                <option value="G5viZ4NM6kbHa">Billie Eilish</option>
+                <option value="G5viZ445z6DAk">Jeff Lynne & ELO</option>
+                <option value="G5viZ4xmoqVOr">The Who</option>
+                <option value="G5viZ4fpi0_Ky">New Kids on the Block</option>
+                <option value="K8vZ9171oJV">Hootie and the Blowfish</option>
+            </select>
 
-        <li>
-          <select id="restaurantsinput" placeholder="restaurants by food type">
-          </select>
-          <button id="foodbutton">Search</button>
-        </li>
+            <button class="concertsButton">Search</button>
 
-        <br />
-        <li>
-          <select class="meetupsInput">
-            <option value="" selected disabled hidden>Choose here</option>
-            <option value="103">Music</option>
-            <option value="101">Business</option>
-            <option value="113">Food & Drink</option>
-            <option value="105">Community</option>
-            <option value="105">Arts</option>
-            <option value="104">Film & Media</option>
-            <option value="108">Sports & Fitness</option>
-            <option value="107">Health</option>
-            <option value="102">Science & Tech</option>
-            <option value="109">Travel & Outdoor</option>
-            <option value="111">Charity & Causes</option>
-            <option value="114">Spirituality</option>
-            <option value="115">Family & Education</option>
-            <option value="112">Government</option>
-            <option value="116">Holiday</option>
-            <option value="106">Fashion</option>
-            <option value="117">Home & Lifestyle</option>
-            <option value="118">Auto, Boat & Air</option>
-            <option value="119">Hobbies</option>
-            <option value="199">Other</option>
-            <option value="120">School Activities</option> </select
-          ><button class="meetupsButton">Search</button>
-        </li>
-        <br />
-        <li>
-          <input type="text" placeholder="concerts by genre" /><button>
-            Search
-          </button>
-        </li>
-        <br />
-      </ul>
+            <br>
+        </ul>
     </div>
 
     <br />
