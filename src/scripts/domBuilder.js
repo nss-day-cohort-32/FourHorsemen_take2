@@ -1,7 +1,7 @@
 
 
 function domBuilder(results_obj) {
-    //Reference 
+    //Reference
     /*INPUT_OBJ = {
         type: "",
         name: "",
@@ -9,7 +9,7 @@ function domBuilder(results_obj) {
         details: ""
     }*/
     let results = document.querySelector("#results")
-    
+
     //create list item container div
     let results_entry_div = document.createElement("div")
     results_entry_div.className = "listItemStyle"
@@ -22,18 +22,18 @@ function domBuilder(results_obj) {
     nameItem.innerHTML = `${results_obj.name} `
     locationItem.innerHTML = ` Location : ${results_obj.location} `
     detailsItem.innerHTML = `About: ${results_obj.details}`
-    
+
     //Add children to the list item container div
     results_entry_div.appendChild(nameItem)
     results_entry_div.appendChild(locationItem)
     results_entry_div.appendChild(detailsItem)
-    
+
     //Make ze Save Button
     let saveButton = document.createElement("button")
     saveButton.className = "saveButton"
     saveButton.textContent = "Save"
-    saveButton.addEventListener("click", function(event){
-        //remove button 
+    saveButton.addEventListener("click", function (event) {
+        //remove button
         let parentDiv = saveButton.parentNode
         parentDiv.removeChild(saveButton)
         //add to Itinerary

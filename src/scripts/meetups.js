@@ -7,18 +7,16 @@ const meetupsBtn = document.querySelector(".meetupsButton")
 
 meetupsBtn.addEventListener("click", function () {
     const inputSelect = meetupsField.value;
-    
     console.log(inputSelect) //For Testing
-    
     fetchMeetups(inputSelect)
 });
 ///////DATE CONVERT FUNCTION
-function date_convert(dateString){
+function date_convert(dateString) {
     //Ex. input "2019-04-24T19:00:00"
     //console.log(dateString)
-    let yr = dateString.substring(0,4)
-    let mo = dateString.substring(5,7)
-    let da = dateString.substring(8,10)
+    let yr = dateString.substring(0, 4)
+    let mo = dateString.substring(5, 7)
+    let da = dateString.substring(8, 10)
     return (`${mo}-${da}-${yr}`)
 }
 /////////const token = // contained in api_keys.js
@@ -47,7 +45,7 @@ function fetchMeetups(searchTerm_ID) {
                     INPUT_OBJ.name = event_item.name.text;
                     INPUT_OBJ.location = event_item.venue.address.address_1;
                     INPUT_OBJ.details = eventDate; //converted above, using date_convert
-                    
+
                     domBuilder(INPUT_OBJ)
                     //console.log(INPUT_OBJ)
                 }
