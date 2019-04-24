@@ -10,13 +10,18 @@ h1, h2  {
 }
 
 #class ul{
-    
+
 }
 li{
     list-style-type: none;
     margin-left: 1em;
 }
-input{
+input, select{
+    width: 50%;
+    padding: .6em;
+    margin-right: .4em;
+}
+option{
     width: 50%;
     padding: .6em;
     margin-right: .4em;
@@ -24,9 +29,14 @@ input{
 button{
     padding: .8em;
     border-radius: 4px;
-
 }
 
 #results  {
     border: 1px solid black;
+}
+.listItemStyle {
+    padding: .2em
+}
+.saveButton{
+    padding: .1em;
 }
