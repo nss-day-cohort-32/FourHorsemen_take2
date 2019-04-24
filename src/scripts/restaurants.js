@@ -45,10 +45,23 @@ foodbutton.addEventListener("click", function () {
 
 
             parsedFoods.restaurants.forEach(restobj => {
-                console.log("place", restobj.restaurant.name),
-                console.log("location", restobj.restaurant.location.address ),
-                console.log("review", restobj.restaurant.user_rating.aggregate_rating)
-            
+                    INPUT_OBJ = {
+                    type: "",
+                    name: "",
+                    location: "",
+                    details: ""
+                }
+                INPUT_OBJ.type= "Restaurants"
+                INPUT_OBJ.name = restobj.restaurant.name;
+                INPUT_OBJ.location = restobj.restaurant.location.address;
+                INPUT_OBJ.details = restobj.restaurant.user_rating.aggregate_rating;
+                
+                domBuilder(INPUT_OBJ)
+               
+                // console.log("place", restobj.restaurant.name),
+                // console.log("location", restobj.restaurant.location.address ),
+                // console.log("review", restobj.restaurant.user_rating.aggregate_rating)
+                
             
             
             });
