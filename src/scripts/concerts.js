@@ -4,7 +4,7 @@ let concertsButton = document.querySelector(".concertsButton");
 concertsButton.addEventListener("click", function () {
     const concertSelect = concertsField.value
 
-    console.log(concertSelect);
+    //console.log(concertSelect);
     getConcertInfo(concertSelect)
 
 })
@@ -14,7 +14,7 @@ function getConcertInfo(info) {
         .then(results => results.json())
         .then(allConcerts => {
             allConcerts._embedded.events.forEach(concert => {
-                console.log(concert)
+                //console.log(concert)
                 if (concert.id === info) {
                     INPUT_OBJ = {
                         type: "",
@@ -25,7 +25,7 @@ function getConcertInfo(info) {
                     INPUT_OBJ.type = "Concerts";
                     INPUT_OBJ.name = concert.name;
                     INPUT_OBJ.location = concert._embedded.venues[0].name;
-                    INPUT_OBJ.details = concert.classifications[0].genre.name;
+                    INPUT_OBJ.details = `Genre : ${concert.classifications[0].genre.name}`;
                     domBuilder(INPUT_OBJ);
                     return true;
                 } else {
