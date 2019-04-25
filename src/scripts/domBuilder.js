@@ -8,6 +8,11 @@ function domBuilder(results_obj) {
         location: "",
         details: ""
     }*/
+
+    document.getElementById("resultsHeader").style.visibility = "visible";
+    document.getElementById("results").style.visibility = "visible";
+    document.getElementById("clearButton").style.visibility = "visible";
+    document.querySelector(".resultsHeaderDiv").style.visibility = "visible";
     let results = document.querySelector("#results")
 
     //create list item container div
@@ -21,7 +26,7 @@ function domBuilder(results_obj) {
     //Add the text to ze children
     nameItem.innerHTML = `${results_obj.name} `
     locationItem.innerHTML = ` Location : ${results_obj.location} `
-    detailsItem.innerHTML = `About: ${results_obj.details}`
+    detailsItem.innerHTML = `${results_obj.details}`
 
     //Add children to the list item container div
     results_entry_div.appendChild(nameItem)
@@ -31,8 +36,11 @@ function domBuilder(results_obj) {
     //Make ze Save Button
     let saveButton = document.createElement("button")
     saveButton.className = "saveButton"
-    saveButton.textContent = "Save"
+    saveButton.textContent = "Add to Itinerary"
     saveButton.addEventListener("click", function (event) {
+        //Make Itinerary visible
+        document.getElementById("itineraryHeader").style.visibility = "visible";
+        document.getElementById("itinerary").style.visibility = "visible"
         //remove button
         let parentDiv = saveButton.parentNode
         parentDiv.removeChild(saveButton)
@@ -47,3 +55,13 @@ function domBuilder(results_obj) {
 
     //console.log(results_obj.name)
 }
+
+let clearButton = document.querySelector("#clearButton")
+clearButton.addEventListener("click", function(event){
+    let results = document.querySelector("#results")
+    results.innerHTML = ""
+    document.getElementById("resultsHeader").style.visibility = "hidden";
+    document.getElementById("results").style.visibility = "hidden";
+    clearButton.style.visibility = "hidden";
+    document.querySelector(".resultsHeaderDiv").style.visibility = "hidden";
+})

@@ -7,7 +7,7 @@ const meetupsBtn = document.querySelector(".meetupsButton")
 
 meetupsBtn.addEventListener("click", function () {
     const inputSelect = meetupsField.value;
-    console.log(inputSelect) //For Testing
+    //console.log(inputSelect) //For Testing
     fetchMeetups(inputSelect)
 });
 ///////DATE CONVERT FUNCTION
@@ -44,6 +44,9 @@ function fetchMeetups(searchTerm_ID) {
                     INPUT_OBJ.type = "Events"
                     INPUT_OBJ.name = event_item.name.text;
                     INPUT_OBJ.location = event_item.venue.address.address_1;
+                    if(INPUT_OBJ.location === null){
+                        INPUT_OBJ.location = "To Be Announced"
+                    }
                     INPUT_OBJ.details = eventDate; //converted above, using date_convert
 
                     domBuilder(INPUT_OBJ)

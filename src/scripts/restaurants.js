@@ -54,7 +54,7 @@ foodbutton.addEventListener("click", function () {
                 INPUT_OBJ.type= "Restaurants"
                 INPUT_OBJ.name = restobj.restaurant.name;
                 INPUT_OBJ.location = restobj.restaurant.location.address;
-                INPUT_OBJ.details = restobj.restaurant.user_rating.aggregate_rating;
+                INPUT_OBJ.details = `5-Star Rating: ${restobj.restaurant.user_rating.aggregate_rating}`;
                 
                 domBuilder(INPUT_OBJ)
                
